@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "LyricsExtension (Package)": {
+      "commandName": "MsixPackage",
+      "doNotLaunchApp": true
+    },
+    "LyricsExtension (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
