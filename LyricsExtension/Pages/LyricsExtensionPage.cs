@@ -4,6 +4,7 @@
 
 using Microsoft.CommandPalette.Extensions;
 using Microsoft.CommandPalette.Extensions.Toolkit;
+using System.Diagnostics;
 
 namespace LyricsExtension;
 
@@ -18,8 +19,17 @@ internal sealed partial class LyricsExtensionPage : ListPage
 
     public override IListItem[] GetItems()
     {
+        var command = new OpenUrlCommand("https://github.com/BestFansi");
+        var showMessageCommand = new ShowMessageCommand();
+
+        Debug.Write("Debug message from GetItems");
+
         return [
-            new ListItem(new NoOpCommand()) { Title = "TODO: Implement your extension here" }
+            new ListItem(command)
+        {
+            Title = "Open my Github main page",
+        },
+            new ListItem(showMessageCommand),
         ];
     }
 }
